@@ -1,0 +1,238 @@
+.logo{
+  position: absolute;
+  width:300px;
+  height:200px;
+  top:30%;
+  left:5%;
+  background: transparent;
+
+
+
+}
+.top-pacman {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  font: normal normal bold 60px/120px "Courier New", Courier, monospace;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  width: 200px;
+  height: 100px;
+  border: none;
+  color: #ffff00;
+  background: #ffff00;
+  transform: rotate(-30deg);
+  border-radius:100px 100px 0 0;
+
+
+
+}
+.bottom-pacman {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 200px;
+  height: 100px;
+  border: none;
+  font: normal normal bold 60px/80px "Courier New", Courier, monospace;
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  color: #ffff00;
+  background: #ffff00;
+  transform: rotate(30deg);
+  border-radius: 0 0 100px 100px;
+
+}
+.rightBracket, .leftBracket {
+  color:darkgrey;
+  position: relative;
+  top: -15px;
+  font-size:160px;
+  display:inline-block;
+  width:30px;
+  text-align: center;
+  z-index: 1;
+
+}
+.rightBracket{
+
+  left:-70px;
+
+}
+.leftBracket {
+  left:25px;
+
+
+}
+
+.SMCCPC{
+  display:inline-block;
+  cursor: pointer;
+  cursor: hand;
+
+}
+
+.SMC {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 0;
+  width: 200px;
+  height: 100px;
+  border: none;
+  font: normal normal bold 60px/120px "Courier New", Courier, monospace;
+  color: rgba(74,134,232,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(63,102,127,1);
+  transform: rotate(0);
+  transition:1s ease;
+
+
+}
+.CPC {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 0;
+  width: 200px;
+  height: 100px;
+  border: none;
+  font: normal normal bold 60px/80px "Courier New", Courier, monospace;
+  color: rgba(255,255,0,0.7);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(63,102,127,1);
+  transform: rotate(0);
+  transition:1s ease;
+
+}
+
+svg {
+  /*border: 3px solid #eee;*/
+  display: block;
+  top: 20%;
+}
+/*animation*/
+.rightBracket{
+
+
+  animation:
+          stretch2
+          1s
+          ease-out
+          1s
+          alternate
+          infinite
+          none
+          running;
+}
+.leftBracket {
+
+
+  animation:
+          stretch1
+          1s
+          ease-out
+          0s
+          alternate
+          infinite
+          none
+          running;
+}
+@keyframes stretch1 {
+  0% {
+    transform: scale(1);
+
+  }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+
+  }
+}
+@keyframes stretch2 {
+  0% {
+    transform: scale(1);
+
+  }
+
+  100% {
+    transform: scale(1.3);
+    opacity: 0;
+    left:-85px;
+
+  }
+}
+.SMCCPC:hover .SMC{
+  border-radius:100px 100px 0 0;
+  color:#ffff00;
+  background-color:#ffff00 ;
+  transform: rotate(-30deg);
+  transition:all 1s ease;
+
+}
+
+
+.SMCCPC:hover .CPC{
+  border-radius: 0 0 100px 100px;
+  color:#ffff00;
+  background-color:#ffff00 ;
+  transform: rotate(30deg);
+  transition:all 1s ease;
+
+}
+.logo:hover .rightBracket{
+  animation-play-state: paused;
+  transition: 1s ease;
+  opacity: 0;
+}
+.logo:hover .leftBracket{
+  animation-play-state: paused;
+  transition: 1s ease;
+  opacity: 0;
+}
+.pacman-top-running{
+  animation:
+          topRunning
+          0.5s
+          ease-in
+          0s
+          alternate
+          infinite
+          none
+          running;
+}
+@keyframes topRunning {
+  0%{
+    transform:rotate(-30deg);
+  }
+  100%{
+    transform:rotate(0deg);
+  }
+}
+.pacman-bottom-running{
+  animation:
+          bottomRunning
+          0.5s
+          ease-in
+          0s
+          alternate
+          infinite
+          none
+          running;
+}
+@keyframes bottomRunning {
+  0%{
+    transform:rotate(30deg);
+  }
+  100%{
+    transform:rotate(0deg);
+  }
+}
+
