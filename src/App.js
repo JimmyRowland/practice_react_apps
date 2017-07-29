@@ -94,7 +94,7 @@ class Icon extends Component{
         this.setState({start:false});
     };
     getPosition=()=>{ReactDOM
-        .findDOMNode(this.refs['svg'+this.props.id])
+        .findDOMNode(this)
         .getBoundingClientRect();};
     render(){
 
@@ -110,9 +110,9 @@ class Icon extends Component{
             this.moveSVG();}
         else if(!this.state.eaten && this.state.start){
             console.log("something");
-            // console.log(ReactDOM.findDOMNode(this).getBoundingClientRect());
+            console.log(this.getPosition());
             let svgComponentposition= ReactDOM.findDOMNode(this).getBoundingClientRect();
-            // console.log(this.props.state.y,svgComponentposition.top);
+            console.log(this.props.state.y,svgComponentposition.top);
             // this.eatSVG(style);
         }
         // else if(!this.state.eaten && this.state.start){
@@ -230,7 +230,7 @@ class App extends Component {
     pacmanComponent=()=>{return this.refs.pacman};
     render(){
         let pacmanY = this.pacmanMoveYstyle();
-        console.log(this.pacmanComponent());
+        // console.log(this.pacmanComponent());
         // let position = ReactDOM.findDOMNode(this.refs["pacman"]).getBoundingClientRect();
         let position = {top:0,left:0};
         return(
